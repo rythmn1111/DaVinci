@@ -32,7 +32,7 @@ st.sidebar.write("Submission by BackendBoys")
 if radio_btn == "DaVinci Dresser":
     st.title("🔮 DaVinci Dresser")
     with st.expander("DaVinci Dresser is a smart AI which can recommend fashion product for any given query"):
-        image = Image.open('ss.png')
+        image = Image.open('ss.PNG')
         st.image(image, caption='process')
     msgs = StreamlitChatMessageHistory()
     memory = ConversationBufferMemory(
