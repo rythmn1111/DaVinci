@@ -26,7 +26,7 @@ openai_api_key = st.sidebar.text_input("Please insert your OpenAI API Key", type
 st.sidebar.write("error will go away once you enter your OpenAI API key")
 radio_btn = st.sidebar.radio(
     "Choose model",
-    ('DaVinci Dresser', 'Curie Matcher'))
+    ('Curie Matcher','DaVinci Dresser'))
 st.sidebar.info('Both our DaVinci Dresser and Curi Matcher are build using [langchain](https://www.langchain.com/) and are based on [MRKL](https://arxiv.org/pdf/2205.00445.pdf) and [ReAct](https://ai.googleblog.com/2022/11/react-synergizing-reasoning-and-acting.html). Both of our AI are capable of understanding all the fashion trends, knows what is trending on social media and also knows the user past purchase history/most viewed item and based on that assist user with there query.  ')
 st.sidebar.write("Submission by BackendBoys")
 if radio_btn == "DaVinci Dresser":
