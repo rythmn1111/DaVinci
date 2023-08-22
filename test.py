@@ -55,8 +55,8 @@ if radio_btn == "DaVinci Dresser":
                     st.write(f"**{step[1]}**")
             st.write(msg.content)
 
-    if prompt121 := st.chat_input(placeholder="Show me something dark academia aesthetic"):
-        st.chat_message("user").write(prompt121)
+    #if prompt121 := st.chat_input(placeholder="Show me something dark academia aesthetic"):
+        #st.chat_message("user").write(prompt121)
 
         if not openai_api_key:
             st.info("Please add your OpenAI API key to continue.")
@@ -78,8 +78,8 @@ if radio_btn == "DaVinci Dresser":
             if response.status_code == 200:
                 product_data = response.json()
 
-               # if 'result' in product_data:
-                #    result_list = product_data['result']
+                if 'result' in product_data:
+                    result_list = product_data['result']
                     num_items = min(num_items, len(result_list))
 
                     product_links = [result_list[i].get('link') for i in range(num_items)]
