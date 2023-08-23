@@ -55,8 +55,8 @@ if radio_btn == "DaVinci Dresser":
                     st.write(f"**{step[1]}**")
             st.write(msg.content)
 
-    #if prompt121 := st.chat_input(placeholder="Show me something dark academia aesthetic"):
-        #st.chat_message("user").write(prompt121)
+    if prompt121 := st.chat_input(placeholder="Show me something dark academia aesthetic"):
+        st.chat_message("user").write(prompt121)
 
         if not openai_api_key:
             st.info("Please add your OpenAI API key to continue.")
@@ -212,7 +212,6 @@ if radio_btn == "DaVinci Dresser":
             response = agent_executor(prompt121, callbacks=[st_cb])
             st.write(response["output"])
             st.session_state.steps[str(len(msgs.messages) - 1)] = response["intermediate_steps"]
-
 else:
     st.title("🧬 Curie Matcher")
     with st.expander("Confused about what to wear with which outfit? Ask Curie Matcher."):
